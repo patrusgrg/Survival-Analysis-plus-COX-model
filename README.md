@@ -311,24 +311,22 @@ Response:
 
 ## 🌐 Deployment Options
 
-### Option 1: Render (Simplest)
+### Option 1: Render (Simplest) ⭐ RECOMMENDED
 
-1. **Push to GitHub**
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin <your-repo-url>
-git push -u origin main
-```
+**See detailed guide**: [`RENDER_DEPLOY.md`](RENDER_DEPLOY.md)
 
-2. **Create Render Web Service**
-   - Go to https://render.com
-   - New → Web Service
-   - Connect GitHub repository
-   - Select "Docker" as environment
-   - Set PORT environment variable: 8000
-   - Deploy!
+Quick steps:
+1. Push repository to GitHub
+2. Go to https://render.com
+3. Create Web Service → Connect GitHub → Select Docker
+4. Set `PORT=8000`
+5. Deploy! (5-10 minutes)
+
+**Includes**:
+- `render.yaml` for one-click deployment
+- Step-by-step instructions
+- Troubleshooting guide
+- Cost estimates
 
 ### Option 2: Google Cloud Run (Production)
 
