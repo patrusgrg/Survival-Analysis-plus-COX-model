@@ -1,0 +1,55 @@
+# Survival Analysis Project - Configuration File
+
+# Data Configuration
+DATA:
+  RAW_FILE: "heart.csv"
+  TRAIN_FILE: "data/train.csv"
+  TEST_FILE: "data/test.csv"
+  TRAIN_TEST_SPLIT: 0.2
+  RANDOM_STATE: 42
+
+# Model Configuration
+MODEL:
+  TYPE: "Cox Proportional Hazards"
+  SAVED_MODEL: "models/cox_model.pkl"
+  PREPROCESSING: "models/preprocessing_artifacts.pkl"
+  
+# Features Configuration
+FEATURES:
+  TIME_COLUMN: "time"  # Age used as time proxy
+  EVENT_COLUMN: "event"  # Binary outcome (0/1)
+  
+  NUMERICAL:
+    - time
+    - resting_bp
+    - cholesterol
+    - max_hr
+    - oldpeak
+    - fasting_bs
+  
+  CATEGORICAL:
+    - sex
+    - chest_pain_type
+    - resting_ecg
+    - exercise_angina
+    - st_slope
+
+# API Configuration
+API:
+  HOST: "0.0.0.0"
+  PORT: 8000
+  WORKERS: 4
+  DEBUG: false
+  CORS_ORIGINS:
+    - "*"
+
+# Frontend Configuration
+FRONTEND:
+  HOST: "0.0.0.0"
+  PORT: 8501
+  API_URL: "http://localhost:8000"
+
+# Logging
+LOGGING:
+  LEVEL: "INFO"
+  FORMAT: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
