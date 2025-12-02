@@ -8,14 +8,15 @@ services:
     autoDeploy: true
     envVars:
       - key: PORT
-        value: 8000
+        value: "8000"
       - key: PYTHONUNBUFFERED
         value: "1"
     
   - type: web
     name: survival-ui
     env: python
-    buildCommand: pip install -r requirements.txt
+    region: oregon
+    buildCommand: pip install -r frontend/requirements.txt
     startCommand: streamlit run frontend/app.py --server.port=$PORT --server.address=0.0.0.0
     port: 8501
     autoDeploy: true
@@ -24,7 +25,5 @@ services:
         value: https://survival-api.onrender.com
       - key: PYTHONUNBUFFERED
         value: "1"
-    
-    # Dependencies - the API must be deployed first
     depends_on:
       - survival-api
