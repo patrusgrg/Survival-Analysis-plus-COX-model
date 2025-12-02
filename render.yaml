@@ -3,7 +3,7 @@ services:
     name: survival-api
     env: docker
     dockerfilePath: ./Dockerfile.backend
-    port: 8000
+    port: "8000"
     healthCheckPath: /health
     autoDeploy: true
     envVars:
@@ -18,7 +18,7 @@ services:
     region: oregon
     buildCommand: pip install -r frontend/requirements.txt
     startCommand: streamlit run frontend/app.py --server.port=$PORT --server.address=0.0.0.0
-    port: 8501
+    port: "8501"
     autoDeploy: true
     envVars:
       - key: API_URL
