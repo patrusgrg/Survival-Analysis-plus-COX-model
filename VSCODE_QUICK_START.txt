@@ -1,0 +1,205 @@
+╔════════════════════════════════════════════════════════════════════════════════╗
+║                    VS CODE QUICK START - WATCH & RUN                            ║
+╚════════════════════════════════════════════════════════════════════════════════╝
+
+✅ FILES CREATED:
+  ✓ .vscode/tasks.json      - Run tasks
+  ✓ .vscode/launch.json     - Debugging
+  ✓ .vscode/settings.json   - Editor settings
+  ✓ VSCODE_GUIDE.md         - Complete documentation
+
+════════════════════════════════════════════════════════════════════════════════
+
+🚀 QUICK START (3 STEPS):
+
+1️⃣  FIRST TIME ONLY: Run Analysis Pipeline
+    Ctrl+Shift+P → Tasks: Run Task → 1. Run Analysis Pipeline
+    (Wait 3-5 minutes for completion)
+
+2️⃣  START EVERYTHING:
+    Ctrl+Shift+P → Tasks: Run Task → RUN ALL (Backend + Frontend)
+    
+    This starts:
+    • Backend API at http://localhost:8000
+    • Frontend UI at http://localhost:8501
+
+3️⃣  WATCH YOUR CODE:
+    • Edit backend/main.py → Auto-restarts API
+    • Edit frontend/app.py → Auto-refreshes UI
+    • See changes live in browser!
+
+════════════════════════════════════════════════════════════════════════════════
+
+📋 ALL AVAILABLE TASKS:
+
+Ctrl+Shift+P → Tasks: Run Task → Choose:
+
+  1. Run Analysis Pipeline
+     └─ Trains Cox model (one-time setup)
+  
+  2. Start Backend API (http://localhost:8000)
+     └─ Runs API with auto-reload
+  
+  3. Start Frontend UI (http://localhost:8501)
+     └─ Runs Streamlit with auto-refresh
+  
+  4. Run Tests
+     └─ Tests all API endpoints
+  
+  5. Start Docker Services
+     └─ docker-compose up -d
+  
+  6. Stop Docker Services
+     └─ docker-compose down
+  
+  RUN ALL (Backend + Frontend)
+     └─ Starts both at once!
+
+════════════════════════════════════════════════════════════════════════════════
+
+🔍 DEBUGGING:
+
+Press F5 or Ctrl+Shift+D to open Debug View
+
+Choose configuration:
+  • DEBUG: Analysis Pipeline
+  • DEBUG: Backend API
+  • DEBUG: Frontend UI
+  • DEBUG: Tests
+
+Then:
+  • F5 to start
+  • Click line numbers to set breakpoints
+  • F10 to step over
+  • F11 to step into
+  • Shift+F5 to stop
+
+════════════════════════════════════════════════════════════════════════════════
+
+⌨️  USEFUL KEYBOARD SHORTCUTS:
+
+  Ctrl+`          → Toggle Terminal
+  Ctrl+Shift+D    → Open Debug View
+  Ctrl+Shift+P    → Command Palette (search everything)
+  Ctrl+\          → Split Editor
+  Ctrl+Shift+B    → Run default task
+  F5              → Start Debugging
+  F10             → Step Over (in debugger)
+  Shift+F5        → Stop Debugging
+  Ctrl+K Ctrl+W   → Close Tab
+  Ctrl+J          → Toggle Terminal
+
+════════════════════════════════════════════════════════════════════════════════
+
+🎯 TYPICAL WORKFLOW:
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                                                                              │
+│  1. Open VS Code (folder: Survival-Analysis-plus-COX-model)                │
+│                                                                              │
+│  2. First time only:                                                        │
+│     Ctrl+Shift+P → Tasks: Run Task → 1. Run Analysis Pipeline             │
+│     (Wait for completion - ~5 minutes)                                     │
+│                                                                              │
+│  3. Start services:                                                         │
+│     Ctrl+Shift+P → Tasks: Run Task → RUN ALL                              │
+│     (Starts API + Frontend)                                               │
+│                                                                              │
+│  4. Edit code and see changes:                                             │
+│     • Open backend/main.py                                                 │
+│     • Make edits                                                           │
+│     • Save (Ctrl+S)                                                        │
+│     • API auto-restarts!                                                   │
+│                                                                              │
+│  5. Test API:                                                              │
+│     • Open http://localhost:8000/docs in browser                          │
+│     • Test endpoints directly from Swagger UI                             │
+│                                                                              │
+│  6. See frontend:                                                          │
+│     • Open http://localhost:8501 in browser                               │
+│     • Use UI to make predictions                                          │
+│     • Changes in code appear instantly                                     │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+════════════════════════════════════════════════════════════════════════════════
+
+🎨 RECOMMENDED LAYOUT:
+
+Split your screen:
+
+┌─────────────────────────────────────────────┐
+│  Code File (backend/main.py)                │
+├──────────────────────┬─────────────────────┤
+│ File Explorer        │ Terminal 1 (API)    │
+│ (Left Sidebar)       │ Terminal 2 (UI)     │
+│                      │                     │
+│                      │ (Bottom Panels)     │
+└──────────────────────┴─────────────────────┘
+
+To achieve:
+1. Open file: backend/main.py
+2. Press Ctrl+\ to split editor
+3. Press Ctrl+J to show terminal
+4. In terminal, click "+" to add terminal
+5. Run tasks in each terminal
+
+════════════════════════════════════════════════════════════════════════════════
+
+✨ FEATURES:
+
+✅ Auto-reload on file changes
+✅ Integrated terminal
+✅ Syntax highlighting
+✅ Error detection
+✅ Code formatting
+✅ Git integration
+✅ Debugging with breakpoints
+✅ Multiple terminals
+✅ Split view
+
+════════════════════════════════════════════════════════════════════════════════
+
+📖 DETAILED GUIDE:
+
+See VSCODE_GUIDE.md for complete documentation:
+  • How to set up tasks
+  • How to debug code
+  • How to test API
+  • How to organize layout
+  • Pro tips & tricks
+
+════════════════════════════════════════════════════════════════════════════════
+
+❓ TROUBLESHOOTING:
+
+Q: Task not appearing in menu?
+A: Reload VS Code (Ctrl+Shift+P → Developer: Reload Window)
+
+Q: Auto-reload not working?
+A: Check "Python" extension is installed (not just "Pylance")
+
+Q: Terminal won't open?
+A: Try Ctrl+J or Terminal → New Terminal
+
+Q: Port already in use?
+A: Kill process: netstat -ano | grep 8000
+
+Q: Changes not showing?
+A: Refresh browser (Ctrl+R or Cmd+R)
+
+════════════════════════════════════════════════════════════════════════════════
+
+🎉 YOU'RE ALL SET!
+
+Now you can:
+✅ Run everything from VS Code
+✅ Watch code changes live
+✅ Debug with breakpoints
+✅ Test APIs directly
+✅ See UI updates instantly
+✅ All in one window!
+
+Start with: Ctrl+Shift+P → Tasks: Run Task → RUN ALL
+
+════════════════════════════════════════════════════════════════════════════════
