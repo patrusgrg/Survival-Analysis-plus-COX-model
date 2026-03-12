@@ -1,7 +1,8 @@
 services:
+  # Backend - Docker
   - type: web
     name: survival-api
-    env: docker
+    runtime: docker
     dockerfilePath: ./Dockerfile.backend
     healthCheckPath: /health
     autoDeploy: true
@@ -10,15 +11,18 @@ services:
         value: "8000"
       - key: PYTHONUNBUFFERED
         value: "1"
-    
+
+  # Frontend - Streamlit
   - type: web
     name: survival-ui
-    env: python
+    runtime: python
     region: oregon
     buildCommand: pip install -r frontend/requirements.txt
-    startCommand: streamlit run frontend/app.py --server.port=8501 --server.address=0.0.0.0
+    startCommand: streamlit run frontend/app.py --server.port=$PORT --server.address=0.0.0.0 --server.headless=true
     autoDeploy: true
     envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.9"
       - key: API_URL
         value: https://survival-api.onrender.com
       - key: PYTHONUNBUFFERED
